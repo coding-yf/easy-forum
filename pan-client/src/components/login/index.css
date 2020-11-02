@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.parent {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./workroom.png");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.son {
+    width: 400px;
+    height: 250px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}

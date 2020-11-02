@@ -1,0 +1,39 @@
+/*下面和源码不一样，源码没仔细看*/
+*{
+    margin: 0;
+    padding: 0;
+}
+.parent {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./workroom.png");
+    /*让子元素垂直居中(son:块级元素&高度确定)*/
+    display: flex;
+    align-items: center;
+    /*1`让子元素水平居中*/
+    justify-content: center;
+}
+.son {
+    width: 400px;
+    height: 250px;
+    border: 1px solid black;
+    /*让子元素垂直居中(loginForm:块级元素&高度不定)*/
+    display: flex;
+    align-items: center;
+    /*2`让子元素水平居中*/
+    justify-content: center;
+    background-color: white;
+    /*1让son相对于parent水平居中(son:块级元素)*/
+    /*margin: 0 auto;*/
+}
+
+/*注意：
+  从上面我们可以发现：
+  想让[子元素]相对于[父元素]垂直居中，是把垂直居中的代码写在[父元素]中
+  想让[子元素]相对于[父元素]水平居中，是把水平居中的代码写在[子元素]中
+
+  上面说-把水平居中的代码写在[子元素]中，这句话成立的条件是：
+  我们使用margin: 0 auto;实现水平居中的
+  但是如果我们是用flex当中的属性justify-content实现子元素水平居中的话，
+  justify-content的属性本来就是父容器的属性，所以这种方式实现水平居中的话应该把代码写在父元素当中
+*/
